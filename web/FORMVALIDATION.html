@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+function validatepassword(elm){
+		var pattern=/^[A-Za-z]\w{6,8}[A-Za-z]$/;
+	if(pattern.test(elm.value))
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}	
+   }
+   function validateEmail(elm){
+	var pattern=/^[A-Za-z0-9\-]+\@[a-zA-Z0-9\-\.]+\.([A-Za-z]{2,3})$/;
+	if(pattern.test(elm.value))
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}	
+   }
+   
+   
+ function isFilled(elm){
+	 if(elm.value =="" || elm.value == null){
+		 return false;
+	 }
+	 else {
+		 return true;
+	 }
+ }
+ function confirmpassword (password,passwordconfirm){
+	 if(password.value == passwordconfirm.value)
+	 {
+		 return true;
+	 }
+	 else
+	 {
+		 return false;
+	 }
+ }
+	
+function submitForm() { //v4.0
+
+
+if(isFilled(login.firstname)== false)
+{
+	alert ("please enter your first name");
+	login.firstname.focus();
+	return false;
+}
+
+ else if(isFilled(login.lastname)== false)
+{
+	alert ("please enter your last name");
+	login.lastname.focus();
+	return false;
+}
+
+
+else if(isFilled(login.username)== false)
+{
+	alert ("please enter your username");
+	login.username.focus();
+	return false;
+}
+
+else if(isFilled(login.Emailaddress)== false)
+{
+	alert ("please enter your Emailid ");
+	login.Emailaddress.focus();
+	return false;
+}
+
+else if(validateEmail(login.Emailaddress)== false)
+{
+	alert("pls enter a valid email id boss");
+	login.Emailaddress.focus();
+	return false;
+}
+
+else if(isFilled(login.password)== false)
+{
+	alert ("please enter your password ");
+	login.password.focus();
+	return false;
+}
+
+else if(validatepassword(login.password)== false)
+{
+	alert("Please enter password of atleast 8 characters length");
+	login.password.focus();
+	return false;
+	
+ }
+
+
+else if(confirmpassword(login.passwordconfirm)== false)
+{
+	alert("Please confirm ur password");
+	login.passwordconfirm.focus();
+	return false;
+	
+ }
+ return true;
+ }
+</script>
+</head>
+
+<body>
+
+ <fieldset><legend>LOGIN</legend>
+<form action=" o.html" method="post" name="login" id="login"  onsubmit="return submitForm(this)">
+   
+ FIRSTNAME:      
+   <input name="firstname" type="text" size="10" maxlength="20" />
+  <br/><br/>
+ LASTNAME:       <input name="lastname" type="text" size="10" maxlength="20" />
+<BR/><br/>
+ 
+ USERNAME:       <input name="username" type="text" size="10" maxlength="20" />
+ <br/> <br/>
+ 
+  EMAIL ADDRESS: <input name="Emailaddress" type="text" size="10" maxlength="20" /><br/><br/>
+ PASSWORD:       <input name="password" type="password" id="password" size="10" maxlength="20" />
+ 
+  <br/> <br/>
+  CONFIRM
+  PASSWORD :  <input name="passwordconfirm" type="password" size="10" maxlength="20"/>
+   <br/><br/>
+ <input name="submit" type="submit" value="submit!" />
+ </form>
+</fieldset>
+
+
+</body>
+</html>

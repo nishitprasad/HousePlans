@@ -1,0 +1,95 @@
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://jquery-itechcolumn.googlecode.com/files/jquery.kwicks-1.5.1.js"></script>
+<script type="text/javascript">
+    $().ready(function() { 
+    $('#accordion-slide').kwicks({ 
+        max : 500, 
+        spacing : 2
+    }); 
+});
+</script>
+<title>Login</title>
+<link type="text/css" rel="stylesheet" href="Css/style.css">
+<link rel="stylesheet" type="text/css" href="ostyle.css" />	
+</head>
+
+
+<body style="background-color:#FFFFFF">
+<div id="topsearch" >
+	<ul id="menu">
+		 
+          <FORM method="GET" action="http://www.google.com/search"> 
+             <TABLE bgcolor="#FFFFFF">
+                <tr><td>
+               <INPUT TYPE=text name=q size=31 maxlength=255 value="">
+               <INPUT TYPE=hidden name=hl value="en">
+                <INPUT type=submit name=btnG VALUE="Search">
+                </td></tr>
+            </TABLE>
+         </FORM>
+        </li>
+	</ul>
+
+	<ul id="top_right_list" class="nav">
+        <li><a href="index.jsp"><strong>Home</strong></a></li>
+		<li ><a href="log.htm"><strong>Login</strong></a></li>
+		<li ><a href="reg.jsp"><strong>Register</strong></a></li>
+                <li><a href="contct.jsp"><strong>Contact Us</strong></a></li>
+         
+	     
+	</ul>
+</div>
+      
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+   <h1 style="font-family:&quot;Agency FB&quot;;color:black">
+                      <center class="style2">
+                           WELCOME TO HOUSE PLANS !!!
+                     </center>
+    </h1>
+  
+<div id="accordion-slide-wrap">
+<ul id="accordion-slide">
+<li><img src="1.jpg" width="500" height="300" alt="Image Title"/></li>
+<li><img src="3.jpg" width="500" height="300" alt="Image Title"/></li>
+<li><img src="4.jpg" width="500" height="300" alt="Image Title"/></li>
+<li><img src="8.jpg" width="500" height="300" alt="Image Title"/></li>
+<li><img src="5.jpg" width="500" height="300" alt="Image Title"/></li>
+<li><img src="10.jpg" width="500" height="300" alt="Image Title"/></li>
+</ul>
+</div>       
+       
+
+
+  <div id="content">
+	<p>
+	<h3 align="center"> <p style="font-family:Agency FB"><strong>PLEASE LOGIN TO ENTER</strong></p></h3>
+	<br/>
+    <center><table border="0" cellpadding="5" cellspacing="5">
+    <form action="logincheck.jsp" method="post" >
+ 	<tr>
+    <td style="font-family:Agency FB"><strong>UserName :</strong></td>
+	<td><input type="text" name="username" value="" /></td>
+	</tr>
+    <tr>
+ 	<td style="font-family:Agency FB"><strong>Password:</strong></td>
+	<td><input type="password" name="password" value=""/></td>
+	</tr>
+    <tr>
+	<td colspan="2"><input type="submit" name="login" value="Login" style="font-family:Bauer "/></td>
+	</tr>
+	</form>
+    </table>
+	</center>
+	</p>
+
+  </div>
+
+
+</body>
+
+
+</html>

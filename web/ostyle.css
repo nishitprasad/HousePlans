@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+<style type="text/css">
+<!--
+.style2 {font-family: "Agency FB"}
+.style4 {
+	font-size: 18px;
+	font-weight: bold;
+	color: red;
+}
+.style5 {font-size: 24px}
+.style6 {
+	font-size: 24;
+	color: black;
+}
+.style8 {
+	font-size: 24;
+	color: black;
+	font-weight: bold;
+	font-family: "Agency FB";
+}
+.style9 {font-size: 36px}
+.style10 {
+	color: black;
+	font-size: 18px;
+	font-family: "Berlin Sans FB";
+}
+.style12 {
+	font-size: 18px;
+	color: black;
+	font-family: "Berlin Sans FB";
+}
+.style13 {color: #FFFF00}
+.style15 {font-size: 18px}
+.style17 {font-family: "Berlin Sans FB"}
+.style18 {color: red}
+.sqfoot {color: red}
+.bedrooms {color: red}
+.demo { text-align:left }
+.time{float:left}
+
+-->
+</style>

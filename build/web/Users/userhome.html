@@ -1,0 +1,92 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css" href="../Css/style_2.css">
+		<script type="text/javascript" language = "JavaScript">
+var loadedobjects=""
+			var rootdomain="http://"+window.location.hostname
+
+			function ajaxpage(url, containerid){
+				
+				var page_request = false
+				if (window.XMLHttpRequest) // if Mozilla, Safari etc
+					page_request = new XMLHttpRequest()
+
+				else if (window.ActiveXObject){ // if IE
+			
+					try {
+						page_request = new ActiveXObject("Msxml2.XMLHTTP")
+					} 
+					catch (e){
+				
+						try{
+							page_request = new ActiveXObject("Microsoft.XMLHTTP")
+						}
+						catch (e){}
+					}
+				}
+
+				else
+
+					return false
+
+				page_request.onreadystatechange=function(){
+
+					loadpage(page_request, containerid)
+				}
+				
+				page_request.open('GET', url, true)
+				page_request.send(null)
+				
+			}
+
+
+			function loadpage(page_request, containerid){
+
+				if (page_request.readyState == 4 && (page_request.status==200 || window.location.href.indexOf("http")==-1))
+				document.getElementById(containerid).innerHTML=page_request.responseText
+			}
+
+		</script>
+	</head>
+	
+	<body id="profile">
+		<div id="wrapper">
+			
+			<div id="profile_head">
+				<table cellspacing="5">
+				<tr>
+				<td><img src="../Images/photo.jpg" alt="image" height="100" width="100" ></td>
+				<td><h1>Welcome USER!!!!</h1></td>
+				</tr>
+				</table>
+			</div>
+			<div class="navigation" id="navigation" >
+				<ul id="nav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Forum</a></li>
+					<li><a href="#">help</a></li>
+					<li><a href="../index.html">Back To Site</a></li>
+				</ul>	
+			</div>
+			
+			<br>
+			
+			<div id="side_menu" class="side_menu">
+				<ul id="side_nav">
+					<li><a href="javascript:ajaxpage('Ajax pages/request_to_post.html', 'ajax_display_info')">Post Article</a>
+					<li><a href="#">View Profile</a>
+					<li><a href="#">Give Feedback</a>
+					<li><a href="#">Request Moderator Rights</a>
+					<li><a href="#">View Progress</a>
+					<li><a href="#">Download Article</a>
+				</ul>	
+			</div>
+			<div id="ajax_display_info">&nbsp;
+			</div>
+			
+		</div>
+	</body>
+
+</html>
